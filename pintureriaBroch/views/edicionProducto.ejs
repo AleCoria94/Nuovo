@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/productAdd.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>Edición de productos</title>
+</head>
+<body>
+
+    <main>
+        <div class="register-container">
+            <form action="/products/edit/<%= product.id %>" method="POST">
+                
+                    <h1>Edición de productos</h1>
+                    <div class="text-box">
+                        <i class="fas fa-angle-double-right"></i>
+                        <input type="text" name="name" id="name" value="<%= product.name %>">
+                    </div>
+                    <div class="text-box">
+                        <i class="fas fa-angle-double-right"></i>
+                        <input type="text" name="description" id="description" value="<%= product.description %>" >
+                    </div>
+                    <div class="text-box">
+                        <i class="fas fa-angle-double-right"></i>
+                    <input type="text" name="price" id="price" value="<%= product.price %>">
+                </div>
+                    <div class="text-box">
+                        <i class="fas fa-angle-double-right"></i>
+                    <input type="file" name="image" id="image" value="<%= product.image %>" >
+                </div>
+
+                <div>
+                    <label for="idcategory"> Categoria </label>
+                    <select name="categorias">
+                    <% for (let h = 0; h < categorias.length; h++) { %>
+                        <option value= "<%= categorias[h].id%>"> <%= categorias[h].name %> </option>
+                        <% }  %>
+                    </select>
+                </div>
+            
+
+                <div>
+                    <label for="idcolor"> Color </label>
+                    <select name="colores">
+                    <% for (let h = 0; h < colores.length; h++) { %>
+                        <option value= "<%= colores.id%>"> <%= colores[h].name %> </option>
+                        <% }  %>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="idtrademark"> Marca </label>
+                    <select name="marcas">
+                    <% for (let h = 0; h < marcas.length; h++) { %>
+                        <option value= "<%= marcas[h].id%>"> <%= marcas[h].name %> </option>
+                        <% }  %>
+                    </select>
+                </div>
+        
+
+                    <div class="btn">
+                    <button type="submit">Editar</button>
+
+                    </div>
+            </form>
+        </div>
+      </main>
+        
+</body>
+</html>

@@ -1,0 +1,464 @@
+ *{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: Roboto;
+ }
+
+ li, a, button{
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  color:white;/*#edf0f1;*/
+  text-decoration: none;
+}
+
+main a {
+  color: rgb(112, 136, 218);
+}
+.errores{
+  justify-content: center;
+  margin-top:100px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.errores a{
+  color:black;
+}
+ 
+.infoheader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(112, 136, 218);
+  padding:10px;
+  flex-direction: column;
+}
+
+.search{
+  justify-content: center;
+}
+
+.infoheader .logosearch{
+  display: flex;
+  padding-left:50px;
+  padding-right:50px;
+}
+
+.infoheader .linksheader{
+  display: flex;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+.search-form{
+  display: flex;
+  flex-direction: column;
+}
+
+button{
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: rgba(0, 136, 169, 0.8);
+}
+ /* main*/ 
+ main{
+   background-color:white;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+.responsive
+{
+  width: 80%;
+  height: auto;
+}
+
+section{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+  height: auto;
+   }
+.container-item{
+  padding-top:20px;
+}
+ .item-column-info img{
+  width:20%;}
+    .items{
+  margin:10px;
+}
+   .item-column-info{
+  display:flex;
+ flex-wrap:wrap;
+ padding-top:5px;
+   }
+   .item-column-info-title{
+ padding-left:5px;
+   }
+.container-item section article {
+ background-color: white;
+ height: 80px;
+ width: 250px;
+ padding: 10px;
+ position: relative;
+ border-radius: 8px;
+ box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
+/*FLEXBOX*/
+justify-content:center;
+}
+
+.container-category{
+  margin:20px 20px;
+  margin:30px 30px;
+}
+.category-info{
+  padding-left: 50px;
+  padding-right: 30px;
+}
+.category-title-header {
+ /*background-color: white;*/
+padding-left: 60px;
+padding-bottom:30px;
+}
+.container-category section article {
+background-color: white;
+ height: 350px;
+ width: 200px;
+ padding: 30px;
+ position: relative;
+ top: 20%;
+ border-radius: 8px;
+ box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
+/*FLEXBOX*/
+/*justify-content:center*/;
+}
+article img{
+  width:100%;
+
+}
+
+.link-categoria{
+  color:black
+}
+
+.lotarticles{
+  display:flex;
+   flex-wrap:wrap;
+   flex-direction: row;
+   align-items: flex-start;
+
+}
+
+
+.imageart{
+  padding-left: 20px;
+  height:60px;
+  padding-right: 20px;
+}
+.articulos {
+
+  background-color: white;
+  height: 100px;
+  width: 90%;
+  padding: 10px;
+  margin: 20px;
+  position: relative;
+  border-radius: 5px;
+  /*box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);*/
+  filter: drop-shadow(0 0 15px #333);
+  padding-top: 10px;
+ /*FLEXBOX*/
+ display: flex;  
+ }
+ .imagen-articulo{
+ padding: 10px;width: 40%;
+ justify-content: center;
+ }
+.infoart{
+  width: 70%;
+}
+ .info-articulos{
+   display:flex
+ }
+
+ .infoart .infoart-name {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.infoart .infoart-price {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+ .infoart-name a{
+  font-size:70%;
+  color:black
+}
+.preciodelista{
+  text-decoration: line-through;
+  font-size:75%;
+  justify-content: center;
+
+
+}
+.preciooferta {
+  font-size: 75%;
+  justify-content: center;
+
+
+}
+.username-name h3 {
+  color:black;
+}
+ /*FOOTER*/
+ 
+
+
+ footer {
+  background-color: rgb(111, 111, 245);
+  height: auto;
+  text-align: center;
+ }
+.footer-contenido{
+padding:20px;
+margin-left: 20px;
+/*Flexbox*/
+display:flex;
+
+}
+
+.container-aviso{
+  padding:10px 10px;
+}
+
+.footer-contenido-logo{
+padding-top:30px;
+padding-left:30px;
+  }
+
+  .footer-bottom{
+    text-align: center;
+    padding:30px;
+  }
+ .footer-bottom-contenido
+ {
+   padding:20px;
+   color:white;
+ }
+
+ @media(max-width:426px){
+   .body{
+flex-direction: column;
+   }
+  .footer-contenido{
+    flex-direction:column;
+  }
+ section .promo{
+    width:30%;
+ }
+
+}
+ 
+@media(min-width:426px)and (max-width:768px){
+  .infoheader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(112, 136, 218);
+    padding:10px;
+    flex-direction: row;
+  }
+  
+  .search{
+    justify-content: center;
+  }
+  
+  .infoheader .logosearch{
+    display: flex;
+    padding-left:50px;
+    padding-right:50px;
+  }
+  
+  .infoheader .linksheader{
+    display: flex;
+    padding-left:20px;
+    padding-right:20px;
+  }
+  
+  .search-form{
+    display: flex;
+    flex-direction: column;
+  }
+ 
+ 
+ 
+ 
+  .footer-contenido{
+
+    flex-direction:column;
+  }
+
+ .imageart{
+  padding-left: 0px;
+  height: 40px;
+  padding-right: 0px;
+
+}
+
+  .articulos {
+ 
+     background-color: white;
+     height: 100px;
+     width: 150px;
+     padding: 10px;
+     margin: 20px;
+     position: relative;
+     border-radius: 5px;
+     /*box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);*/
+     filter: drop-shadow(0 0 15px #333);
+     padding-top: 10px;
+    /*FLEXBOX*/
+    display: flex;  
+    }
+ 
+    .infoart .infoart-name {
+      padding-left: 0px;
+      padding-right: 0px;
+  }
+ 
+    .infoart-name a{
+     font-size:25%;
+ }
+ .preciodelista{
+     text-decoration: line-through;
+     font-size:50%;
+     justify-content: center;
+  
+ 
+ }
+ .preciooferta {
+     font-size: 50%;
+     justify-content: center;
+  
+ 
+ }
+ .categoria-pintureria {
+  padding-left: 20px;
+} 
+}
+@media(min-width:769px){
+  .infoheader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(112, 136, 218);
+    padding:10px;
+    flex-direction: row;
+  }
+  
+  .search{
+    justify-content: center;
+  }
+  
+  .infoheader .logosearch{
+    display: flex;
+    padding-left:50px;
+    padding-right:50px;
+  }
+  
+  .infoheader .linksheader{
+    display: flex;
+    padding-left:20px;
+    padding-right:20px;
+  }
+  
+  .search-form{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+
+  .lotarticles{
+
+justify-content: center;
+    display:flex;
+     flex-wrap:wrap;
+     flex-direction: row;
+     align-items: flex-start;
+ 
+ }
+
+ .imageart{
+  padding-left: 0px;
+  height: 90px;
+  padding-right: 0px;
+
+}
+
+  .articulos {
+ 
+     background-color: white;
+     height: 400px;
+     width: 250px;
+     padding: 10px;
+     margin: 20px;
+     position: relative;
+     border-radius: 5px;
+     /*box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);*/
+     filter: drop-shadow(0 0 15px #333);
+     padding-top: 10px;
+    /*FLEXBOX*/
+    display: flex; 
+    justify-content: space-between; 
+    }
+ 
+
+    .info-articulos{
+      display:flex;
+      flex-direction: column; 
+    
+    }
+    .infoart-name {
+     padding-top: 10px;
+     padding-bottom: 10px;
+ }
+ 
+ .infoart{
+   width: 100%;
+ }
+    .infoart-name a{
+     font-size:125%;
+ }
+ .preciodelista{
+     padding-top: 10px;
+     padding-bottom: 10px;
+     text-decoration: line-through;
+     font-size:125%;
+     justify-content: center;
+  
+ 
+ }
+ .preciooferta {
+     padding-top: 10px;
+     padding-bottom: 10px;
+     font-size: 150%;
+     justify-content: center;
+  
+ 
+ }
+
+.categoria-pintureria {
+  padding-left: 160px;
+} 
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <title>Creá tu cuenta</title>
+</head>
+<body>
+  
+           <!-- Header -->
+	<%- include('partials/header') %>
+  <!-- /Header -->
+         
+    <main>
+        <div class="register-container">
+            <form  action="/users/register" method="POST" class="reservation" >
+                
+                    <h1>Creá tu cuenta</h1>
+                    <div class="text-box">
+                      <i class="fas fa-user"></i>
+                        <input type="text" name="name" id="name" placeholder="Nombre completo" class="name">
+                    </div>
+                        <div class="text-box">
+                          <i class="fas fa-user"></i>
+                    <input type="text" name="username" id="username" placeholder="Nombre de usuario" class="username">
+                    </div>
+                    <div class="text-box">
+                      <i class="fas fa-at"></i>
+                      <input type="email" name="email" id="email" placeholder="Mail" class="email">
+                    </div>
+                    <div class="text-box">
+                       <i class="fas fa-lock"></i>
+                    <input type="password" name="password" id="password" placeholder="Contraseña" class="password">
+                    </div>
+                    <div class="text-box">
+                      <i class="fas fa-user"></i>
+                        <input type="text" name="address" id="address" placeholder="Dirección completa" class="address">
+                    </div>
+                        <div class="text-box">
+                          <i class="fas fa-user"></i>
+                    <input type="text" name="location" id="location" placeholder="Localidad" class="location">
+                    </div>
+                    <div class="text-box">
+                      <i class="fas fa-user"></i>
+                      <input type="text" name="province" id="province" placeholder="Provincia" class="province">
+                    </div>
+                    <div class="text-box">
+                      <i class="fas fa-user"></i>
+                    <input type="text" name="country" id="country" placeholder="País" class="country">
+                    </div>
+                  
+                    
+                    <div class="btn">
+                    <button type="submit">Registrarse</button>
+                    </div>
+
+                  
+            </form>
+            <div class="errores">
+              <ul> </ul>
+            </div>
+
+          <% if (typeof errors != "undefined") {%>
+         <% errors.forEach(function (error) {%>
+           <li class="errores"><%= error.msg%></li>
+            <% }); %>
+         <% } %>  
+        </div>
+       
+        <script src ="/js/form.js"></script>
+
+      </main>
+    <footer>
+     </footer>
+     
+
+</body>
+</html>
+

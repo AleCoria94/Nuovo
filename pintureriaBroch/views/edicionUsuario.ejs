@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/productAdd.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>Editar tu usuario</title>
+</head>
+<body>
+
+    <main>
+        <div class="register-container">
+            <form action="/users/edit/<%= resultado.id %>" method="POST" class="reservation">
+                
+                    <h1>Editar tu usuario</h1>
+
+                    <div class="text-box">
+                        <i class="fas fa-angle-double-right"></i>
+                        <input type="text" name="name" id="name" value="<%= resultado.name %>"> "nombre"
+                    </div>
+                    <div class="text-box">
+                        <i class="fas fa-angle-double-right"></i>
+                        <input type="text" name="username" id="username" value="<%= resultado.username %>" > "nombre de usuario"
+                    </div>
+                        <div class="text-box">
+                            <i class="fas fa-angle-double-right"></i>
+                        <input type="password" name="email" id="email" value="<%= resultado.email %>"> "email"
+                    </div>
+                    <div class="text-box">
+                        <i class="fas fa-angle-double-right"></i>
+                    <input type="text" name="address" id="address"  value="<%= resultado.address %>"> "direccion"
+                </div>
+                <div class="text-box">
+                    <i class="fas fa-angle-double-right"></i>
+                <input type="text" name="location" id="location"  value="<%= resultado.location %>"> "localidad"
+            </div>
+            <div class="text-box">
+                <i class="fas fa-angle-double-right"></i>
+            <input type="text" name="province" id="province"  value="<%= resultado.province %>"> "provincia"
+        </div>   
+        <div class="text-box">
+            <i class="fas fa-angle-double-right"></i>
+        <input type="text" name="country" id="country"  value="<%= resultado.country %> " > "pais"
+    </div>   
+
+                    <div class="btn">
+                    <button type="submit">Editar</button>
+                    </div>
+            </form>
+        </div>
+      </main>
+
+</body>
+</html>

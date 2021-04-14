@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Detalle de Producto</title>
+    <link rel='stylesheet' href='/stylesheets/productDetail.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  </head>
+  <body>
+
+     <!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+      <main>
+        <br>
+        <hr>
+        <br>
+      <div class="product">
+              <div class="container">
+                        <div class= "imageproduct">
+                          <div class="imageproductcontainer">
+                            <img class="imagen" src="/images/<%= product.image %>">
+                          </div>
+                        </div>
+                        <div class="infoproduct">
+                                  
+                                    <div class= "nameproduct">
+                                      <h1><%= product.name %></h1>
+                                    </div>
+                                    <div class="paymentproduct">
+
+    
+                                      <div class="price">
+                                              <div class="productprice">
+                                                <h3>  Precio</h3>
+                                                <h1> $  <%= product.price %>  </h1>
+
+                                              </div>
+
+                                      </div>
+                                <div class="buy">
+                                          
+                                            
+                                             
+                                              <div id="cart-options">
+                                                <form action="/carts/addProduct/<%= product.id %>" method="POST">
+                                                 
+                                                  <button type="submit" class="btn">
+                                                    <i class="fas fa-shopping-cart"></i>
+                                                    Agregar al carrito
+
+                                                  </button>
+                                                </form>
+                                            </div>
+                                          
+                                        
+                                        </div>
+                              </div>
+
+                                              <div class="pickupcontainer">
+                                                <div class="pickupcontainerinfo">
+                                                        <div class="method"> 
+                                                        <div class="methodinfo">
+                                                             <i class="far fa-credit-card"></i>
+                                                                      <div class="textinfo">
+                                                                        <h4>Medios de pago</h4>
+                                                                         <h4><a href="">Ver promociones</a></h4>
+                                                                         
+
+                                                                        </div> 
+                                                                    </div>
+                                                             </div>
+                                                        <div class="pick">
+                                                                <div class="pickinfo">
+                                                                         <i class="fas fa-shopping-bag"></i>
+                                                                             <div class="textinfo">
+                                                                              <h4>Retirá gratis en nuestras sucursales</h4>
+                                                                                    
+                                                                              </div>
+                                                                             </div>
+                                                                  </div>
+                                                    
+                                              </div>
+                                              </div>
+                          
+                                  </div>
+                                    
+                          </div>
+              </div> 
+        
+
+     
+        <section class="descriptionproduct">
+          <div class="infodescription">
+
+              <div class="descriptiontitulo">
+                <h1>Descripcion</h1>
+
+            
+              </div>
+              <div class="descriptioninfo">
+
+                <h2><%=product.description %></h2>
+            
+              </div>
+
+          </div>
+        </section> 
+        <br>
+
+        
+
+
+      </main>
+                <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+
+    </div>
+    
+  </body>
+</html>

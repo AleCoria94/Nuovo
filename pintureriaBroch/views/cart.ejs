@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel='stylesheet' href='/stylesheets/cart.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">  
+  </head>
+  <body>
+
+    <!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+
+    <main>
+<br>
+<div class="carritodecompras">
+  <h1>Carrito de compras</h1>
+</div>
+  <section class="lotarticles">
+    <div class="container-articulos">
+                <%for(let i = 0; i < products.length; i++) { %>
+                <div class="articulos">
+                    
+                    <div class="info-articulos">
+                            <div class="imagen-articulo">
+                                <img class="imageart" src="/images/<%=products[i].image%>" style="height: 100px;">
+                            </div>
+                            <hr>
+                            <div class="infoart">
+                                      <div class="infoart-name">
+                                          <a href="/products/<%=products[i].id%>">
+                                              <%=products[i].name%></a>
+                      
+                                      </div>
+                                      <hr>
+                                      <div class="infoart-price">
+                                                <div class="preciodelista">
+                                                $ <%=(products[i].price * 1.05)%> 
+                                              </div>
+                                              <hr>
+                                                  <div class="preciooferta">
+                                                    $ <%=products[i].price%>
+                                                  </div>
+                                              <hr>
+                                      </div> 
+                            <div class="infoeliminar">
+
+                              <form class="formBorrarProducto" action="/carts/deleteProduct/<%=products[i].id%>" method="POST">
+                                <button type="submit">Eliminar<i class="fas fa-trash-alt"></i></button>
+                                    </form>
+                            </div>
+                                      
+                            </div>
+                      </div>
+                  </div>
+                  <% } %> 
+                </div>
+  </section>  
+<div class="totalprice">
+                <h1>Total: $ <%=cart.total%></h1>
+</div>
+<div class="finalizar">
+
+<form action="/carts/buy" method="POST">
+  <button type="submit" class="btn">Finalizar compra</button>
+</form>
+
+</div>
+
+
+<div>
+<br>
+
+
+          <!-- footer -->
+          <%- include('partials/footer') %>
+          <!-- /footer -->
+
+</div>
+
+</body>
+</html>

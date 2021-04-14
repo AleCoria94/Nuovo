@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/login.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>Login</title>
+</head>
+<body>
+      <!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+
+    <main>
+        <div class="login-container">
+         <% if (typeof errors != "undefined") {%>
+                        <% errors.forEach(function (error) {%>
+                              <li><%= error.msg%></li>
+                        <% }); %>
+                    <% } %>
+
+            <form action="/users/login" method="POST">
+                
+                    <h1>Login</h1>
+                
+                    <div class="text-box">
+                        <i class="fas fa-at"></i>
+                        <input type="email" name="email" id="email" placeholder="email">
+                      </div>
+
+                    <div class="text-box">
+                       <i class="fas fa-lock"></i>
+                    <input type="password" name="password" id="password" placeholder="password">
+                     </div>
+                    <label for="">Recordame</label>
+                    <input type="checkbox" name="recordame">
+
+
+
+                    <div class="btn">
+                    <button type="submit">Sign in</button>
+                    </div>
+
+                    <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+
+                    <p><a href="/users/register">¿Primera vez? Registrate Acá</a></p>
+            </form>
+
+                    <br>
+                   
+
+        </div>
+        </main>
+    <footer>
+    </footer>
+    
+</body>
+</html>
